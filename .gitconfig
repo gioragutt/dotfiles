@@ -1,0 +1,16 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Giora Guttsait
+	email = giora111@gmail.com
+
+[alias]
+  default-branch = !basename $(git symbolic-ref --short refs/remotes/origin/HEAD) 
+  graph-raw = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white) %s%C(reset) %C(bold yellow)- %cn%C(reset)%C(bold red)%d%C(reset)'
+  graph = graph-raw --all
+  pr = pull --rebase
+  ob = checkout -b
+  amend = commit --amend
+  qam = commit --amend --no-edit
+  tmp = commit -m
+  far-master = !git fetch && git checkout -f $(git default-branch) && git reset --hard origin/$(git default-branch)
+  wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
