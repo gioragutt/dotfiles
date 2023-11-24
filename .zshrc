@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[ -s "$HOME/zsh_aliases.sh" ] && \. "$HOME/zsh_aliases.sh"
+[ -s "$HOME/.zsh_aliases.sh" ] && \. "$HOME/.zsh_aliases.sh"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
